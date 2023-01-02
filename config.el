@@ -77,3 +77,13 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+;;
+
+;; Ergonomic remappings
+(map! :leader :desc "Window jump" :n "W" #'ace-window)
+
+(map! :leader :desc "2 char jump" :n "-" #'avy-goto-char-2)
+
+(map! :leader :desc "Toggle zoom mode" :n "z" #'zoom-mode)
+
+(after! zoom (setq zoom-size '(0.618 . 0.618)))

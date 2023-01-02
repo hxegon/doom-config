@@ -48,3 +48,10 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
+
+(unpin! cider)
+
+(after! embark
+  (setq embark-quit-after-action '((kill-buffer . nil) (t . t))))
+
+(package! zoom)
