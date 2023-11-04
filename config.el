@@ -66,6 +66,19 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; WIP
+;; customized evil stuff
+;;
+;; How to map these correctly? map! seems to not work
+;; (defun evil-scroll-down-center ()
+;;   (interactive)
+;;   (evil-scroll-down t)
+;;   (evil-scroll-line-to-center nil))
+
+;; (defun evil-scroll-up-center ()
+;;   (interactive)
+;;   (evil-scroll-up t)
+;;   (evil-scroll-line-to-center nil))
 ;; Ergonomic remappings
 
 ;; Quick jumping  to beginning / end of line
