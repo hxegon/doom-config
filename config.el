@@ -89,6 +89,9 @@
 
 (add-hook! 'clojure-mode-hook #'evil-cleverparens-mode)
 (add-hook! 'emacs-lisp-mode-hook #'evil-cleverparens-mode)
+
+(set-popup-rule! "^\\*cider-repl" :ignore t)
+
 ;; Ergonomic remappings
 
 ;; Quick jumping  to beginning / end of line
