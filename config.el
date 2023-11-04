@@ -13,9 +13,20 @@
 ;;
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
-;;
-(setq doom-font (font-spec :family "Fira Code" :size 18 :weight 'normal)
-     doom-variable-pitch-font (font-spec :family "Fira Sans" :size 18))
+
+(defun set-font-size (font-size)
+  "set the global font size"
+  (interactive "new text size: ")
+  (setq doom-font (font-spec :family "Fira Code" :size font-size :weight 'normal)
+        doom-variable-pitch-font (font-spec :family "Fira Sans" :size font-size))
+  (doom/reload-font))
+
+;; Map change-font-size to space h r F
+(map! :leader :desc "Set font size" :n "hrF" #'set-font-size)
+
+;; By default, adjust font size to something suitable for my laptop screen
+(setq doom-font (font-spec :family "Fira Code" :size 24 :weight 'normal)
+      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 24))
 
 (setq doom-theme 'doom-zenburn)
 
