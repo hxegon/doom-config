@@ -90,6 +90,8 @@
 (add-hook! 'clojure-mode-hook #'evil-cleverparens-mode)
 (add-hook! 'emacs-lisp-mode-hook #'evil-cleverparens-mode)
 
+(setq evil-shift-width 4)
+
 (set-popup-rule! "^\\*cider-repl" :ignore t)
 
 ;; Ergonomic remappings
