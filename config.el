@@ -79,6 +79,10 @@
 ;;   (interactive)
 ;;   (evil-scroll-up t)
 ;;   (evil-scroll-line-to-center nil))
+
+;; change currently focused window to be larger
+(after! zoom (setq zoom-size '(0.6 . 0.6)))
+(zoom-mode)
 ;; Ergonomic remappings
 
 ;; Quick jumping  to beginning / end of line
