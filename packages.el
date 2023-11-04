@@ -50,6 +50,7 @@
 ;(unpin! t)
 
 (unpin! cider)
+(unpin! clojure-mode)
 
 (after! embark
   (setq embark-quit-after-action '((kill-buffer . nil) (t . t))))
