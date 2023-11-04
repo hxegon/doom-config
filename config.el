@@ -83,6 +83,9 @@
 ;; change currently focused window to be larger
 (after! zoom (setq zoom-size '(0.6 . 0.6)))
 (zoom-mode)
+
+(add-hook! 'clojure-mode-hook 'zprint-format-on-save-mode)
+(add-hook! 'clojurescript-mode-hook 'zprint-format-on-save-mode)
 ;; Ergonomic remappings
 
 ;; Quick jumping  to beginning / end of line

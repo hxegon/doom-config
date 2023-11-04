@@ -57,3 +57,9 @@
 
 
 (package! zoom)
+
+;; Alternate (and much simpler) version of zprint-mode package.
+;; zprint-mode doesn't have an option to use a custom zprint.
+;; I have zprint installed but it won't use that, it has a wrapping script
+;; that will install it's own version.
+(package! zprint-format)
