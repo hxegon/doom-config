@@ -86,6 +86,9 @@
 
 (add-hook! 'clojure-mode-hook 'zprint-format-on-save-mode)
 (add-hook! 'clojurescript-mode-hook 'zprint-format-on-save-mode)
+
+(add-hook! 'clojure-mode-hook #'evil-cleverparens-mode)
+(add-hook! 'emacs-lisp-mode-hook #'evil-cleverparens-mode)
 ;; Ergonomic remappings
 
 ;; Quick jumping  to beginning / end of line
@@ -99,3 +102,17 @@
 (map! :leader :desc "Toggle zoom mode" :n "z" #'zoom-mode)
 
 (after! zoom (setq zoom-size '(0.618 . 0.618)))
+;; Package mappings
+
+;; Bind tab / shift tab to drag forward and back
+;; in evil-cleverparens
+(map!
+ :map evil-cleverparens-mode-map
+ :desc "cleverparens: drag forward"
+ :n "C-."
+ #'evil-cp-drag-forward)
+(map!
+ :map evil-cleverparens-mode-map
+ :desc "cleverparens: drag backward"
+ :n "C-,"
+ #'evil-cp-drag-backward)

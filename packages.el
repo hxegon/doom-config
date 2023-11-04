@@ -55,6 +55,13 @@
 (after! embark
   (setq embark-quit-after-action '((kill-buffer . nil) (t . t))))
 
+;; MUST BE SET BEFORE EVIL-CLEVERPARENS
+;; Don't override s or evil-surround's S
+(setq evil-cleverparens-use-s-and-S nil)
+;; of a form's contents.
+(setq evil-cleverparens-use-regular-insert t)
+
+(package! evil-cleverparens)
 
 (package! zoom)
 
